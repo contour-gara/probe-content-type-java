@@ -12,7 +12,8 @@ class ByFilesTest {
             "test.jpeg, image/jpeg",
             "test.txt, text/plain",
             "てすと.png, image/png",
-            "テスト（1）.png, image/png"
+            "テスト（1）.png, image/png",
+            "スペース　あり.png, image/png"
     })
     void ファイル名からContentTypeを取得できる(String fileName, String expected) throws Exception {
         // setup

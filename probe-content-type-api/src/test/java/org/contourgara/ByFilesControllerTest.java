@@ -6,7 +6,6 @@ import static org.mockito.Mockito.*;
 
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +18,7 @@ class ByFilesControllerTest {
     @Autowired
     MockMvc mockMvc;
 
-    @MockitoBean
+    @MockitoBean("byFiles")
     ProbeContentType probeContentType;
 
     @BeforeEach

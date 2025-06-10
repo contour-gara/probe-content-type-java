@@ -5,7 +5,7 @@ import static org.assertj.core.api.Assertions.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-class ByFilesTest {
+class ProbeContentTypeByFilesTest {
     @ParameterizedTest
     @CsvSource({
             "test.png, image/png",
@@ -17,7 +17,7 @@ class ByFilesTest {
     })
     void ファイル名からContentTypeを取得できる(String fileName, String expected) throws Exception {
         // setup
-        ByFiles sut = new ByFiles();
+        ProbeContentTypeByFiles sut = new ProbeContentTypeByFiles();
 
         // execute
         String actual = sut.execute(fileName);

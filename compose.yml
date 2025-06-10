@@ -1,0 +1,14 @@
+services:
+  photo-note-api:
+    image: api:1.0-SNAPSHOT
+#    build:
+#      context: ./api
+#      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    healthcheck:
+      test: "curl -f http://localhost:8080/actuator/health || exit 1"
+      interval: 5s
+      timeout: 5s
+      retries: 3
+      start_period: 30s

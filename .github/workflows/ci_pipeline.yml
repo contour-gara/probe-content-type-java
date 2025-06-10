@@ -21,4 +21,5 @@ jobs:
           cache: 'maven'
 
       - name: Run unit test
-        run: ./mvnw clean test
+        working-directory: api
+        run: ../mvnw clean test

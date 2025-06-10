@@ -1,8 +1,8 @@
 services:
   photo-note-api:
-    image: api:1.0-SNAPSHOT
+    image: probe-content-type-api:1.0-SNAPSHOT
 #    build:
-#      context: ./api
+#      context: ./probe-content-type-api
 #      dockerfile: Dockerfile
     ports:
       - 8080:8080

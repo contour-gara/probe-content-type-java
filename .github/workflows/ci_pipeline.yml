@@ -21,5 +21,26 @@ jobs:
           cache: 'maven'
 
       - name: Run unit test
-        working-directory: api
+        working-directory: probe-content-type-api
+        run: ../mvnw clean test
+
+  integration_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'corretto'
+          java-version: '21'
+          cache: 'maven'
+
+      - name: Build
+        working-directory: probe-content-type-api
+        run: ../mvnw clean spring-boot:build-image -Dmaven.test.skip=true
+
+      - name: Run unit test
+        working-directory: integration-test
         run: ../mvnw clean test

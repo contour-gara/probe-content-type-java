@@ -87,6 +87,11 @@
                         </goals>
                     </execution>
                 </executions>
+<!--                <configuration>-->
+<!--                    <image>-->
+<!--                        <runImage>amazoncorretto:21-al2023</runImage>-->
+<!--                    </image>-->
+<!--                </configuration>-->
             </plugin>
         </plugins>
     </build>
